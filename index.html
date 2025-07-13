@@ -2,76 +2,188 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Eternal IAS - UPSC Coaching Institute</title>
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
 
+    header {
+      background-color: #002c5f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
 
+    nav {
+      background-color: #003f7f;
+      padding: 10px;
+      text-align: center;
+      flex-wrap: wrap;
+    }
 
-  .enquiry-form {
-    max-width: 600px;
-    margin: 40px auto;
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
+    nav a {
+      color: white;
+      margin: 8px 10px;
+      display: inline-block;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-  .enquiry-form h2 {
-    margin-bottom: 20px;
-    color: #002c5f;
-    text-align: center;
-  }
+    .hero {
+      text-align: center;
+      padding: 20px;
+    }
 
-  .enquiry-form input,
-  .enquiry-form select,
-  .enquiry-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0 16px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-  }
+    .hero img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
 
-  .enquiry-form button {
-    background-color: #002c5f;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 16px;
-  }
+    .hero marquee {
+      font-weight: bold;
+      font-size: 16px;
+      padding: 10px;
+      color: red;
+      background-color: #fff3f3;
+    }
 
-  .enquiry-form button:hover {
-    background-color: #004080;
-  }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
 
+    h2 {
+      color: #002c5f;
+    }
 
-    
+    footer {
+      background-color: #002c5f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
 
+    .scroll-container {
+      width: 100%;
+      overflow: hidden;
+      background: #f5f5f5;
+    }
 
+    .scroll-images {
+      display: flex;
+      width: max-content;
+      animation: scroll-left-right 20s linear infinite;
+    }
 
-body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; }
-    header { background-color: #002c5f; color: white; padding: 20px; text-align: center; }
-    nav { background-color: #003f7f; padding: 10px; text-align: center; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    
-    .hero h1 { font-size: 40px; }
-    .hero p { font-size: 20px; margin: 20px 0; }
-    .hero .buttons a { background-color: red; color: white; padding: 10px 20px; margin: 5px; text-decoration: none; border-radius: 5px; }
-    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
-    h2 { color: #002c5f; }
-    footer { background-color: #002c5f; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+    .scroll-images img {
+      height: 200px;
+      margin: 0 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes scroll-left-right {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .enquiry-form {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .enquiry-form h2 {
+      margin-bottom: 20px;
+      color: #002c5f;
+      text-align: center;
+    }
+
+    .enquiry-form input,
+    .enquiry-form select,
+    .enquiry-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0 16px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+    .enquiry-form button {
+      background-color: #002c5f;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    .enquiry-form button:hover {
+      background-color: #004080;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .scroll-images img {
+        height: 150px;
+        margin: 0 5px;
+      }
+
+      .enquiry-form {
+        margin: 20px 10px;
+        padding: 20px;
+      }
+
+      section {
+        padding: 20px 10px;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .scroll-images img {
+        height: 120px;
+      }
+
+      .hero marquee {
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 <body>
- <header>
+
+  <header>
     <h1>Eternal IAS</h1>
     <p>India's Leading Institute for UPSC Preparation</p>
-  </header> 
+  </header>
 
   <nav>
     <a href="#vision">Vision & Mission</a>
@@ -82,59 +194,20 @@ body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: 
   </nav>
 
   <section class="hero">
-   
-<div> <marquee> <FONT COLOR="RED">CALL : 9216635559 NOW ! FOR UPCOMING BATCHES FOR CIVIL SERVICES, IAS EXAM 2025-26</marquee></FONT></div>
-
-<div align="left" ><img src="w1.jpg" height="500" width="1000"> </div>
+    <marquee>CALL : 9216635559 NOW ! FOR UPCOMING BATCHES FOR CIVIL SERVICES, IAS EXAM 2025-26</marquee>
+    <img src="w1.jpg" alt="Banner Image" />
   </section>
 
-<!-------------- code for images scrolling ---> 
-
-<style>
-  .scroll-container {
-    width: 100%;
-    overflow: hidden;
-    background: #f5f5f5;
-    border-top: 0px solid #ddd;
-    border-bottom: 0px solid #ddd;
-  }
-
-  .scroll-images {
-    display: flex;
-    width: max-content;
-    animation: scroll-left-right 15s linear infinite;
-  }
-
-  .scroll-images img {
-    height: 250px;
-    margin: 0 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  }
-
-  @keyframes scroll-left-right {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-  }
-</style>
-
-<div class="scroll-container">
-  <div class="scroll-images">
-    <img src="3.jpg" alt="Eternal IAS Classroom" />
-    <img src="4.jpg" alt="Rajesh Panchariya Sir" />
-    <img src="5.jpg" alt="Student Interaction" />
-    <img src="6.jpg" alt="IAS Workshop" />
-    <img src="7.jpg" alt="Eternal IAS Delhi" />
-    <img src="8.jpg" alt="Eternal IAS Delhi" />
+  <div class="scroll-container">
+    <div class="scroll-images">
+      <img src="3.jpg" alt="Eternal IAS Classroom" />
+      <img src="4.jpg" alt="Rajesh Panchariya Sir" />
+      <img src="5.jpg" alt="Student Interaction" />
+      <img src="6.jpg" alt="IAS Workshop" />
+      <img src="7.jpg" alt="Eternal IAS Delhi" />
+      <img src="8.jpg" alt="Eternal IAS Delhi" />
+    </div>
   </div>
-</div>
-
-<!------------------------>
-
-
-
-
-
 
   <section id="vision">
     <h2>Vision Statement</h2>
@@ -152,64 +225,60 @@ body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: 
 
   <section id="director">
     <h2>Director's Message</h2>
-    <p><strong>Mr. Rajesh Panchariya</strong><br><br> Founder & Director, Eternal IAS<br> <br>Former Head – RAU'S IAS | 21+ Years of Experience</p>
+    <p><strong>Mr. Rajesh Panchariya</strong><br><br> Founder & Director, Eternal IAS<br><br>Former Head – RAU'S IAS | 21+ Years of Experience</p>
     <p>
-      Dear Aspirants,<br> <br>
-      The journey to becoming a civil servant is not just about passing an exam—it's about becoming a thinker, a reformer, and a responsible leader of our nation. With more than two decades of experience guiding thousands of IAS aspirants, I’ve come to believe that the right mentorship, disciplined preparation, and unwavering motivation can transform even an ordinary student into an extraordinary officer.<br /><br />
-      At <strong>Eternal IAS</strong>, we are committed to providing not just academic excellence but also the values, ethics, and administrative temperament essential for success in civil services. Our personalized approach, integrated courses, and strategic test series are designed to meet the unique needs of every aspirant.<br /><br />
-      I welcome you to be a part of this transformative journey. Let us walk this path together—toward knowledge, service, and nation-building.<br /><br />
-      <em>“Your dreams are eternal—and so is our commitment to your success".</em><br>
-      <br>Warm regards,<br /> <br>
+      Dear Aspirants,<br><br>
+      The journey to becoming a civil servant is not just about passing an exam—it's about becoming a thinker, a reformer, and a responsible leader of our nation.
+      With more than two decades of experience guiding thousands of IAS aspirants, I’ve come to believe that the right mentorship, disciplined preparation,
+      and unwavering motivation can transform even an ordinary student into an extraordinary officer.<br><br>
+      At <strong>Eternal IAS</strong>, we are committed to providing not just academic excellence but also the values, ethics,
+      and administrative temperament essential for success in civil services.
+      Our personalized approach, integrated courses, and strategic test series are designed to meet the unique needs of every aspirant.<br><br>
+      I welcome you to be a part of this transformative journey. Let us walk this path together—toward knowledge, service, and nation-building.<br><br>
+      <em>“Your dreams are eternal—and so is our commitment to your success".</em><br><br>
+      Warm regards,<br><br>
       <strong>Rajesh Panchariya</strong>
     </p>
   </section>
 
-  
-<!--- Contact Form ------>
+  <div class="enquiry-form">
+    <h2>Enquiry Form</h2>
+    <form action="submit-form.php" method="POST">
+      <label for="name">Full Name *</label>
+      <input type="text" id="name" name="name" required />
 
+      <label for="email">Email Address *</label>
+      <input type="email" id="email" name="email" required />
 
-<div class="enquiry-form">
-  <h2>Enquiry Form</h2>
-  <form action="submit-form.php" method="POST">
-    <label for="name">Full Name *</label>
-    <input type="text" id="name" name="name" required />
+      <label for="phone">Mobile Number *</label>
+      <input type="tel" id="phone" name="phone" required />
 
-    <label for="email">Email Address *</label>
-    <input type="email" id="email" name="email" required />
+      <label for="city">City</label>
+      <input type="text" id="city" name="city" />
 
-    <label for="phone">Mobile Number *</label>
-    <input type="tel" id="phone" name="phone" required />
+      <label for="course">Course Interested In</label>
+      <select id="course" name="course">
+        <option value="">-- Select Course --</option>
+        <option value="UPSC Foundation">UPSC Foundation</option>
+        <option value="NCERT Basics">NCERT Basics</option>
+        <option value="Prelims Cum Mains">Prelims Cum Mains</option>
+        <option value="Optional Subject">Optional Subject</option>
+        <option value="Interview Guidance">Interview Guidance</option>
+      </select>
 
-    <label for="city">City</label>
-    <input type="text" id="city" name="city" />
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" placeholder="Your message or specific query..."></textarea>
 
-    <label for="course">Course Interested In</label>
-    <select id="course" name="course">
-      <option value="">-- Select Course --</option>
-      <option value="UPSC Foundation">UPSC Foundation</option>
-      <option value="NCERT Basics">NCERT Basics</option>
-      <option value="Prelims Cum Mains">Prelims Cum Mains</option>
-      <option value="Optional Subject">Optional Subject</option>
-      <option value="Interview Guidance">Interview Guidance</option>
-    </select>
+      <button type="submit">Submit Enquiry</button>
+    </form>
+  </div>
 
-    <label for="message">Message</label>
-    <textarea id="message" name="message" rows="4" placeholder="Your message or specific query..."></textarea>
-
-    <button type="submit">Submit Enquiry</button>
-  </form>
-</div>
-
-
-
-
-<! ----------------------->
-
-<footer id="contact">
-    <p>Head Office: Ridhi Sidhi Circle, Gopalpura Bypass, Jaipur. Ph : 9216635559, 8769658727</p>
+  <footer id="contact">
+    <p>Head Office: Ridhi Sidhi Circle, Gopalpura Bypass, Jaipur. Ph: 9216635559, 8769658727</p>
     <p>Branch Office: Old Rajendra Nagar, Near Karol Bagh Metro Station, Delhi</p>
     <p>Website: www.eternalias.in | Email: info@eternalias.in</p>
     <p>&copy; 2025 Eternal IAS. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
