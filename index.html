@@ -208,12 +208,56 @@
     }
 
     .blinking-link {
-      animation: blink 1s infinite;
+      animation: blink 100s infinite;
     }
 
     @keyframes blink {
       0%, 100% { opacity: 1; }
       50% { opacity: 0.4; }
+    }
+.whatsapp-button {
+      background-color: #25D366;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #1ebe5b;
+    }
+
+.button {
+      display: inline-block;
+      padding: 12px 20px;
+      margin: 10px;
+      font-size: 16px;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .whatsapp-button {
+      background-color: #25D366;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #1ebe5b;
+    }
+
+    .call-button {
+      background-color: #007BFF;
+    }
+
+    .call-button:hover {
+      background-color: #0069d9;
     }
 
 <! ---------------------- >
@@ -223,7 +267,7 @@
 <body>
 
   <header>
-    <img src="eternal_logo.png" alt="Eternal IAS Logo" height="150" width="150">
+    <img src="eternal_logo1.png" alt="Eternal IAS Logo" height="150" width="150">
     <h1>Eternal IAS</h1>
     <p> A Premier Institute for Civil Services Examination</p>
   </header>
@@ -237,10 +281,28 @@
   </nav>
 
   <section class="hero">
-    <marquee>CALL : <a href="tel:+91921663559">Call Us: +91 9216635559</a>
- NOW ! FOR  CIVIL SERVICES EXAM 2025-26, 2026-27 </marquee> <br>
+<!------    
+<marquee> <a href="tel:+91921663559">Call Us: +91 9216635559</a>
+ NOW ! FOR  CIVIL SERVICES EXAM 2025-26, 2026-27 </marquee>
+----->
+ <br>
 	<a href="brochure.pdf" class="download-button blinking-link" download>Download Brochure</a>
   <a href="mentorship.pdf" class="download-button blinking-link" download>Download Mentorship Program</a>
+ <a 
+    href="https://wa.me/91921663559" 
+    target="_blank" 
+    class="button whatsapp-button">
+    Chat on WhatsApp
+  </a>
+
+  <!-- Call Button -->
+  <a 
+    href="tel:+91921663559" 
+    class="button call-button">
+    Call Now
+  </a>
+
+
     <img src="w1.jpg" alt="Banner Image" />
   </section>
 
