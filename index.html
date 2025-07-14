@@ -176,13 +176,56 @@
         font-size: 14px;
       }
     }
+
+<!-- Blinking Link Download Browser Code ....>
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .blinking-link {
+      animation: blink 1s infinite;
+      color: blue;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  .download-button {
+      display: inline-block;
+      padding: 12px 20px;
+      margin: 10px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #007BFF;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .download-button:hover {
+      background-color: #0056b3;
+    }
+
+    .blinking-link {
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+<! ---------------------- >
+
   </style>
 </head>
 <body>
 
   <header>
+    <img src="eternal_logo.png" alt="Eternal IAS Logo" height="150" width="150">
     <h1>Eternal IAS</h1>
-    <p>India's Leading Institute for UPSC Preparation</p>
+    <p> A Premier Institute for Civil Services Examination</p>
   </header>
 
   <nav>
@@ -194,13 +237,20 @@
   </nav>
 
   <section class="hero">
-    <marquee>CALL : 9216635559 NOW ! FOR UPCOMING BATCHES FOR CIVIL SERVICES, IAS EXAM 2025-26</marquee>
+    <marquee>CALL : <a href="tel:+1921663559">Call Us: +1 9216635559</a>
+ NOW ! FOR  CIVIL SERVICES EXAM 2025-26, 2026-27 </marquee> <br>
+	<a href="browser.pdf" class="download-button blinking-link" download>Download Browser</a>
+  <a href="mentorship.pdf" class="download-button blinking-link" download>Download Mentorship Program</a>
     <img src="w1.jpg" alt="Banner Image" />
   </section>
 
   <div class="scroll-container">
     <div class="scroll-images">
-      <img src="3.jpg" alt="Eternal IAS Classroom" />
+      	<img src="21.jpg" alt="Eternal IAS Classroom" />
+	<img src="22.jpg" alt="Eternal IAS Classroom" />
+	<img src="23.jpg" alt="Eternal IAS Classroom" />
+	<img src="24.jpg" alt="Eternal IAS Classroom" />
+	<img src="25.jpg" alt="Eternal IAS Classroom" />
       <img src="4.jpg" alt="Rajesh Panchariya Sir" />
       <img src="5.jpg" alt="Student Interaction" />
       <img src="6.jpg" alt="IAS Workshop" />
@@ -225,7 +275,7 @@
 
   <section id="director">
     <h2>Director's Message</h2>
-    <p><strong>Mr. Rajesh Panchariya</strong><br><br> Founder & Director, Eternal IAS<br><br>Former Head – RAU'S IAS | 21+ Years of Experience</p>
+    <p><strong>Mr. Rajesh Panchariya</strong><br><br> Founder & Director, Eternal IAS<br><br>Former Head – RAU'S IAS Study Circle | 23+ Years of Mentorship & Guidance in the field of Civil Services</p>
     <p>
       Dear Aspirants,<br><br>
       The journey to becoming a civil servant is not just about passing an exam—it's about becoming a thinker, a reformer, and a responsible leader of our nation.
@@ -259,11 +309,17 @@
       <label for="course">Course Interested In</label>
       <select id="course" name="course">
         <option value="">-- Select Course --</option>
-        <option value="UPSC Foundation">UPSC Foundation</option>
-        <option value="NCERT Basics">NCERT Basics</option>
-        <option value="Prelims Cum Mains">Prelims Cum Mains</option>
-        <option value="Optional Subject">Optional Subject</option>
-        <option value="Interview Guidance">Interview Guidance</option>
+        <option value="CAREER ASSURANCE PROGRAM (CAP) : 3 Yrs.">CAREER ASSURANCE PROGRAM (CAP) - 3 Yrs.</option>
+        <option value="IAS FOUNDATION COURSE - 1 Yr/2 Yr">IAS FOUNDATION COURSE- 1 Yr/2 Yr</option>
+        <option value="IAS AND RAS INTEGRATED COURSE - 15 Months">IAS AND RAS INTEGRATED COURSE - 15 Months</option>
+        <option value="IAS AND RAS INTEGRATED COURSE - 15 Months">IAS AND RAS INTEGRATED COURSE - 15 Months</option>
+        <option value="OPTIONAL SUBJECT - Anthropology (4-5 Months)">OPTIONAL SUBJECT - Anthropology (4-5 Months)</option>
+	<option value="IAS MENTORSHIP PROGRAM">IAS MENTORSHIP PROGRAM</option>
+	<option value="MAINS TEST SERIES">MAINS TEST SERIES</option>
+	<option value="PRELIMS TEST SERIES">PRELIMS TEST SERIES</option>
+	<option value="ANTHROPOLOGY OPTIONAL TEST SERIES">ANTHROPOLOGY OPTIONAL TEST SERIES</option>
+
+
       </select>
 
       <label for="message">Message</label>
@@ -274,9 +330,12 @@
   </div>
 
   <footer id="contact">
-    <p>Head Office: Ridhi Sidhi Circle, Gopalpura Bypass, Jaipur. Ph: 9216635559, 8769658727</p>
-    <p>Branch Office: Old Rajendra Nagar, Near Karol Bagh Metro Station, Delhi</p>
-    <p>Website: www.eternalias.in | Email: info@eternalias.in</p>
+    <p>Head Office: Plot No 4 & 5, Near Kotawala's, Ridhi Sidhi Circle, Gopalpura Bypass Road, Jaipur. Ph: 9216635559, 8769658727</p>
+    <p>Centres: Old Rajendra Nagar, Near Karol Bagh Metro Station, Delhi <br>
+      		Rawat College, Jaipur <br>
+		NSCBM College, Hamirpur (H.P.) <br>
+		Gautam Group of College, Hamirpur (H.P.) </p>
+    <p>Website: www.eternalias.in | Email: contact@eternalias.com </p>
     <p>&copy; 2025 Eternal IAS. All rights reserved.</p>
   </footer>
 
